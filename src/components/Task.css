@@ -1,0 +1,17 @@
+.task {
+    padding: 10px;
+    margin: 20px 20px;
+    border-radius: 25px;
+    border: 3px solid gray;
+    display: flex;
+    justify-content: space-between;
+}
+
+.taskname{
+    font-weight: normal;
+}
+.taskrest{
+    text-align: center;
+}
+
+
