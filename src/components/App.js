@@ -43,8 +43,8 @@ class App extends Component {
   }
 
   changeTaskStatus = (id) => {
-    // let tasks = Array.from(this.state.tasks);
-    const tasks = [...this.state.tasks];
+    let tasks = Array.from(this.state.tasks);
+    // const tasks = [...this.state.tasks];
     tasks.forEach(task => {
       if(task.id === id){
         task.active = false;
@@ -66,7 +66,6 @@ class App extends Component {
       </div>
     );
   }
-  
 }
 
 export default App;
