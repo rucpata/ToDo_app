@@ -10,7 +10,7 @@ const Task = props => {
         <div className='task'>
             <h3 className='taskname'>{name}</h3>
             <div className='taskrest'>
-                <p>Zrobić do: {date}</p>
+                <p>Zrobić do: <br/>{date}</p>
                 <button onClick={() => props.change(id)}>Zostało zrobione</button>
                 <button onClick={() => props.delete(id)}>X</button>
             </div>
