@@ -12,7 +12,7 @@ class App extends Component {
         id: 0,
         name: 'Ogarnąć się przed końcem świata. Ogarnąć się przed końcem świata.',
         date: '2020-02-20',
-        important: true,
+        important: false,
         active: true,
         finishDate: null
       },
