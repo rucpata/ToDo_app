@@ -1,0 +1,17 @@
+input {
+    margin: 10px;
+    padding: 5px 10p;
+    font-size: 1em;
+    
+}
+
+.form {
+    font-size: 1em;
+}
+
+.form button {
+    padding: 3px 10px;
+    text-transform: uppercase;
+    margin: 20px;
+    font-size: 20px;
+}

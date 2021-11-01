@@ -60,7 +60,7 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        TODO APP
+        <h1>TODO APP</h1>
         <TaskAdd />
         <TaskList tasks={this.state.tasks} delete={this.deleteTask} change={this.changeTaskStatus}/>
       </div>

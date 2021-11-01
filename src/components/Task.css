@@ -9,18 +9,16 @@
 
 .taskname{
     font-weight: normal;
-    flex: 2;
+    flex: 3;
     
 }
 .taskrest{
     text-align: center;
     display: flex;
-    flex: 1;
+    flex: 2;
     justify-content: end;
 }
 
-.taskrest button{
-    max-height: 100%;
-}
+
 
 
