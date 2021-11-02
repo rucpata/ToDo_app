@@ -6,6 +6,7 @@ import './App.css';
 
 class App extends Component {
 
+  counter = 2;
   state = {
     tasks: [
       {
@@ -57,11 +58,28 @@ class App extends Component {
     })
   }
 
+  taskAdd = (name, date, important) => {
+    const task = {
+        id: this.counter,
+        name,//tekst z inputa
+        date,//tekst z inputa
+        important, //checked z inputa 
+        active: true,
+        finishDate: null
+    }
+    this.counter++
+
+    this.setState(prevState => ({
+      tasks: [...prevState.tasks, task]
+    }))
+    return true
+  }
+
   render(){
     return (
       <div className="App">
         <h1>TODO APP</h1>
-        <TaskAdd />
+        <TaskAdd add={this.taskAdd}/>
         <TaskList tasks={this.state.tasks} delete={this.deleteTask} change={this.changeTaskStatus}/>
       </div>
     );

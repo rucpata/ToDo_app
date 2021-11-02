@@ -29,6 +29,19 @@ class TaskAdd extends Component {
     }
 
     handleClick = () => {
+        const {name, checked, date} = this.state
+        if(name.length > 2){
+            const add = this.props.add(name, date, checked)
+            if(add){
+                this.setState({
+                    name: '',
+                    checked: false,
+                    date: this.minDate,
+                })
+            }
+        } else {
+            console.log('')
+        }
         
     }
 
@@ -39,8 +52,8 @@ class TaskAdd extends Component {
             <div className='form'>
                 <input type='text' placeholder='Dodaj zadanie' value={this.state.name} onChange={this.handleName}/>
                 <input type='checkbox' checked={this.state.checked} id='important' onChange={this.handelCheckbox}/>
-                <label htmlForm='important'>Priorytet</label><br/>
-                <label htmlForm='date'>Do kiedy zrobić</label>
+                <label htmlFor='important'>Priorytet</label><br/>
+                <label htmlFor='date'>Do kiedy zrobić</label>
                 <input type='date' value={this.state.date} min={this.minDate} max={maxDate} onChange={this.handelDate}/><br/>
                 <button onClick={this.handleClick}>Dodaj</button>  
             </div>

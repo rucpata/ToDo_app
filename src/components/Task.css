@@ -9,13 +9,10 @@
 
 .taskname{
     font-weight: normal;
-    flex: 3;
-    
 }
 .taskrest{
     text-align: center;
     display: flex;
-    flex: 2;
     justify-content: end;
 }
 
