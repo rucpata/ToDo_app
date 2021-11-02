@@ -10,5 +10,7 @@ body{
 .App {
     padding: 15px;
     display: block;
-
+    background-position:top;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
