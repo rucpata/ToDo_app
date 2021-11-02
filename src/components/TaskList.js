@@ -1,5 +1,6 @@
 import React from 'react'
 import Task from './Task';
+import './TaskList.css';
 
 const TaskList = props => {
     const {tasks} = props
@@ -28,18 +29,29 @@ const TaskList = props => {
     const doneTasks = done.map(task => <Task key={task.id} task={task} delete={props.delete} change={props.change}/>)
 
     return(
-        <div>
-            <div className='active'>
-                <h2>Zadania do zrobienia</h2>
-                {activeTasks.length > 0 ? activeTasks : <p>Brak zadań do wykonania.</p>}
+        <>
+            <h1>lista ZADAŃ</h1>
+                <div className='taskList'>
+                
+                <div className='listConteinter'>
+                    <h3>zadania DO ZROBIENIA</h3>
+                    <div className='active'>
+                    {activeTasks.length > 0 ? activeTasks : <p>Brak zadań do wykonania.</p>}
+                    </div>
+                </div>
+                <div className='listConteinter'>
+                    <h3>zadania ZROBIONE <em>{done.length}</em></h3>
+                    <div className='done'>
+                        {done.length > 10 && <span style={{fontSize: 10}}>wyświetlonych jest jedynie 10 ostatnich wykonaych zadań</span>}
+                        {doneTasks.slice(0, 10)}
+                    </div>
+                </div>
+                
             </div>
-            <div className='done'>
-                <h2>Zadania zrobione <em>{done.length}</em></h2>
-                {done.length > 10 && <span style={{fontSize: 10}}>wyświetlonych jest jedynie 10 ostatnich wykonaych zadań</span>}
-                {doneTasks.slice(0, 10)}
-            </div>
-        </div>
+        </>
     )
+        
+        
 }
 
 

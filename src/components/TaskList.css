@@ -1,0 +1,42 @@
+h1 {
+    font-weight: lighter;
+}
+
+.taskList{
+    display: flex;
+    justify-content: space-around;
+}
+
+.listConteinter h3{
+    text-align: left;
+    font-weight: lighter;
+    margin-left: 20px;
+}
+
+.active, .done{
+    margin: 10px 10px;
+    border-radius: 25px;
+    padding: 10px 10px;
+    min-height: 50vh;
+    height: auto;
+    min-width: 40vw;
+}
+
+.active {
+    background-color: #F7EDED;
+}
+
+.done {
+    background-color: #EFFCEF;
+}
+
+@media screen and (max-width: 768px) {
+    .taskList {
+        display: block;
+    }
+
+    .active, .done {
+        height: 100vh;
+        width: 90%;
+    }
+}
