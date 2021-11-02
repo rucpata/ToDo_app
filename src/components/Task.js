@@ -10,11 +10,13 @@ const Task = props => {
 
     const {name, date, id, active, important, finishDate} = props.task
     // const {delete, change} = props
+    const priority = important ? <p>HIGH PRIORITY</p> : <p>LOW PRIORITY</p>
 
     if(active){
         return(
             <>
                 <div className='task' style={important ? style : null}>
+                    {priority}
                     <h3 className='taskname'>{name}</h3>
                     <div className='taskrest'>
                         <p>Zrobić do: <br/>{date}</p>
@@ -27,9 +29,11 @@ const Task = props => {
         )
     } else {
         const finishTime = new Date(finishDate).toLocaleString()
+        
         return (
             <>
                 <div className='task' style={important ? style : null}>
+                    {priority}
                     <h3 className='taskname'>{name}</h3>
                     <div className='taskrest'>
                         <p>Zrobić do: <br/>{date}</p>
