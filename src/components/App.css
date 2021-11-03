@@ -5,12 +5,20 @@ body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     font-weight: lighter;
+    background-image: url(./img/bgim.png);
+    background-position:top;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .App {
     padding: 15px;
     display: block;
-    background-position:top;
-    background-size: cover;
-    background-repeat: no-repeat;
+    color: #5D5D5D;
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        font-size: 0.8em;
+    }
 }

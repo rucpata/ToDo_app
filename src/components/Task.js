@@ -1,28 +1,38 @@
-import React from 'react'
-import './Task.css'
+import React from 'react';
+import './Task.css';
+import trash from './img/trash.png';
+import done from './img/done.png';
+
 
 
 const Task = props => {
 
-    const style = {
-        border: '3px red solid',
-    }
+    // const styleH = {
+    //     borderRadius: '25px',
+    //     backgroundColor: 'red',
+    // }
 
+    // style={important ? style : null}
+    // style={important ? style : null}
     const {name, date, id, active, important, finishDate} = props.task
     // const {delete, change} = props
-    const priority = important ? <p>HIGH PRIORITY</p> : <p>LOW PRIORITY</p>
+    const priority = important ? <p className='priority priorityH'>HIGH PRIORITY</p> : <p className='priority priorityL'>LOW PRIORITY</p>
 
     if(active){
         return(
             <>
-                <div className='task' style={important ? style : null}>
-                    {priority}
+                <div className='task'>
+                    <div className='taskHeader'>
+                        {priority}
+                        <div>
+                            <img alt='done'src={done} onClick={() => props.change(id)}/>
+                            <img alt='trash' src={trash} onClick={() => props.delete(id)}/>
+                        </div>
+                    </div>
+                    
                     <h3 className='taskname'>{name}</h3>
-                    <div className='taskrest'>
-                        <p>Zrobić do: <br/>{date}</p>
-                        <button onClick={() => props.change(id)}>Zostało zrobione</button>
-                        <button onClick={() => props.delete(id)}>X</button>
-                        
+                    <div className='taskdate'>
+                        <p>Zrobić do: {date}</p>                        
                     </div>
                 </div>
             </>
@@ -32,13 +42,17 @@ const Task = props => {
         
         return (
             <>
-                <div className='task' style={important ? style : null}>
-                    {priority}
+                <div className='task' >
+                    <div className='taskHeader'>
+                        {priority}
+                        <div>
+                            <img alt='trash' src={trash} onClick={() => props.delete(id)}/>
+                        </div>
+                    </div>
                     <h3 className='taskname'>{name}</h3>
-                    <div className='taskrest'>
-                        <p>Zrobić do: <br/>{date}</p>
+                    <div className='taskdate'>
+                        <p>Zrobić do: {date}</p>
                         <p>Potwierdzenie wykonania: {finishTime}</p>
-                        <button onClick={() => props.delete(id)}>X</button>
                     </div>
                 </div>
             </>

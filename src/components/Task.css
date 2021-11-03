@@ -1,21 +1,50 @@
 .task {
     padding: 20px;
-    margin: 20px 20px;
-    border-radius: 25px;
-    border: 3px solid gray;
-    display: flex;
-    justify-content: space-between;
+    margin: 10px 10px;
+    border-radius: 15px;
+    background-color: white;
+    display: block;
 }
 
 .taskname{
     font-weight: normal;
 }
-.taskrest{
-    text-align: center;
-    display: flex;
-    justify-content: center;
+.taskdate{
+    text-align: right;
+    font-weight: lighter;
+    font-size: 1rem;
 }
 
+.taskHeader {
+    display: flex;
+    justify-content: space-between;
+}
 
+.priority {
+    font-size: 0.8em;
+    border-radius: 10px;
+    padding: 10px 10px;
+}
 
+.priorityH{
+    color: #FF0808;
+    background-color: #FACFCF; 
+}
 
+.priorityL{
+    color: #00D96C;
+    background-color: #DDFFDD;
+}
+
+.taskHeader div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img {
+    height: auto;
+    width: auto;
+    padding: 0px 10px;
+    cursor: pointer;
+}
