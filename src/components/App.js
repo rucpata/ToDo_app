@@ -12,22 +12,22 @@ class App extends Component {
   counter = 2;
   state = {
     tasks: [
-      {
-        id: 0,
-        name: 'Ogarnąć się przed końcem świata. Ogarnąć się przed końcem świata.',
-        date: '2020-02-20',
-        important: false,
-        active: true,
-        finishDate: null
-      },
-      {
-        id: 1,
-        name: 'Kupić kota',
-        date: '2020-02-20',
-        important: true,
-        active: true,
-        finishDate: null
-      },
+      // {
+      //   id: 0,
+      //   name: 'Ogarnąć się przed końcem świata. Ogarnąć się przed końcem świata.',
+      //   date: '2020-02-20',
+      //   important: false,
+      //   active: true,
+      //   finishDate: null
+      // },
+      // {
+      //   id: 1,
+      //   name: 'Kupić kota',
+      //   date: '2020-02-20',
+      //   important: true,
+      //   active: true,
+      //   finishDate: null
+      // },
     ]
   }
 
