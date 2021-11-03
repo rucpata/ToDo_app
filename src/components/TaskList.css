@@ -7,19 +7,13 @@ h1 {
     justify-content: space-around;
 }
 
-.listConteinter h3{
-    text-align: left;
-    font-weight: lighter;
-    margin-left: 20px;
-}
-
 .active, .done{
     margin: 10px 10px;
     border-radius: 25px;
     padding: 10px 10px;
-    min-height: 50vh;
+    min-height: 60vh;
     height: auto;
-    min-width: 40vw;
+    width: 40vw;
 }
 
 .active {
@@ -36,7 +30,8 @@ h1 {
     }
 
     .active, .done {
-        height: 100vh;
+        min-height: 40vh;
+        height: auto;
         width: 90%;
     }
 }

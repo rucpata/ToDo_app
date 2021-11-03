@@ -51,8 +51,8 @@ const Task = props => {
                     </div>
                     <h3 className='taskname'>{name}</h3>
                     <div className='taskdate'>
-                        <p>Zrobić do: {date}</p>
-                        <p>Potwierdzenie wykonania: {finishTime}</p>
+                        {/* <p>Zrobić do: {date}</p> */}
+                        <p>Wykonane: {finishTime}</p>
                     </div>
                 </div>
             </>

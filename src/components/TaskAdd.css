@@ -1,17 +1,47 @@
+.form{
+    background-color: #EFECFA;
+    border-radius: 25px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+}
+
+input[type=text]{
+    width: 80vw;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 10px;
+    text-align: left;
+}
+
+.option{
+    text-align: left; 
+    padding: 10px 10px;
+}
+
+.option input{
+    margin-right: 20px;
+}
+
 input {
     margin: 10px;
-    padding: 5px 10p;
-    font-size: 1em;
-    
+    font-size: 1em; 
 }
 
 .form {
     font-size: 1em;
 }
 
-.form button {
-    padding: 3px 10px;
-    text-transform: uppercase;
-    margin: 20px;
-    font-size: 20px;
+button{
+    right: 20%;
+    background-color: #DDFFDD;
+    border-radius: 12px;
+    border: none;
+    shape-outside: none;
+    padding: 5px 25px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #9bf59b;
 }

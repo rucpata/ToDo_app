@@ -43,7 +43,8 @@ const TaskList = props => {
                     <h3>zadania ZROBIONE <em>{done.length}</em></h3>
                     <div className='done'>
                         {done.length > 10 && <span style={{fontSize: 10}}>wyświetlonych jest jedynie 10 ostatnich wykonaych zadań</span>}
-                        {doneTasks.slice(0, 10)}
+                        {doneTasks.length > 0 ? doneTasks.slice(0, 10) : <p>Nie wykonałeś jeszcze żaden zadania</p>}
+                        
                     </div>
                 </div>
                 

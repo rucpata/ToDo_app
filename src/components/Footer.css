@@ -1,0 +1,14 @@
+.footer{
+    padding: 10px 10px;
+}
+
+.footer a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #5D5D5D;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -49,14 +49,20 @@ class TaskAdd extends Component {
         let maxDate = this.minDate.slice(0, 4) * 1 + 1
         maxDate = maxDate +  "-12-31"
         return (
-            <div className='form'>
-                <input type='text' placeholder='Dodaj zadanie' value={this.state.name} onChange={this.handleName}/>
-                <input type='checkbox' checked={this.state.checked} id='important' onChange={this.handelCheckbox}/>
-                <label htmlFor='important'>Priorytet</label><br/>
-                <label htmlFor='date'>Do kiedy zrobić</label>
-                <input type='date' value={this.state.date} min={this.minDate} max={maxDate} onChange={this.handelDate}/><br/>
-                <button onClick={this.handleClick}>Dodaj</button>  
-            </div>
+            <>
+                <h3>dodaj ZADANIE</h3>
+                <div className='form'>
+                    <input type='text' placeholder='Dodaj nowe zadanie' value={this.state.name} onChange={this.handleName}/>
+                    <div className='option'>
+                        <label htmlFor='important'>Priorytet</label>
+                        <input type='checkbox' checked={this.state.checked} id='important' onChange={this.handelCheckbox}/>
+                        <label htmlFor='date'>Do kiedy zrobić</label>
+                        <input type='date' value={this.state.date} min={this.minDate} max={maxDate} onChange={this.handelDate}/><br/>
+                    </div>
+                    <button className='add' onClick={this.handleClick}>Dodaj</button>  
+                </div>
+            </>
+            
         );
     }
 }

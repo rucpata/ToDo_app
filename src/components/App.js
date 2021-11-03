@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
 import TaskAdd from './TaskAdd';
 import TaskList from './TaskList';
-import bgim from './img/bgim.png';
+import Footer from './Footer';
+// import bgim from './img/bgim.png';
 import './App.css';
+
+
 
 class App extends Component {
 
@@ -78,9 +81,10 @@ class App extends Component {
   render(){
     return (
       <div className="App" >
-        <h1>TODO APP</h1>
+        <h1>Aplikacja ToDo</h1>
         <TaskAdd add={this.taskAdd}/>
         <TaskList tasks={this.state.tasks} delete={this.deleteTask} change={this.changeTaskStatus}/>
+        <Footer/>
       </div>
     );
   }
